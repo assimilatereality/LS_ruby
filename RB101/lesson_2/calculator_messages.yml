@@ -1,0 +1,57 @@
+---
+en:
+  welcome: |
+    Welcome to the calculator program! For English, enter 1.
+       Willkommen im Taschenrechnerprogramm! Geben Sie für Deutsch 2 ein.
+  valid_language_choice: |
+    Your choice is not valid. Please select:
+    1 for English
+    Ihre Wahl ist ungültig. Bitte wählen Sie:
+    2 für Deutsch
+  name: "By what name should I call you?"
+  valid_name: "Make sure to use a valid name."
+  salute: "Hello"
+  operator_choice:  |
+    What operation would you like to perform?
+     1) Addition
+     2) Subtraction
+     3) Multiplication
+     4) Division
+  invalid_operation: "Your entry is not correct. It must be 1, 2, 3, or 4."
+  number: "What's the number?"
+  no_number: "Your entry was blank. A number is needed to do the math."
+  invalid_number: "Hmm... that doesn't look like a valid number."
+  zero_not_allowed: "A valid number must be entered. Also, '0' is not allowed as a denominator."
+  Adding: "Adding the numbers "
+  Subtracting: "Subtracting the numbers "
+  Multiplying: "Multiplying the numbers "
+  Dividing: "Dividing the numbers "
+  result: "The result is: "
+  do_again: "Do you want to perform another calculation? [y/n]"
+  invalid_confirmation: "Your answer is not recognized. Please answer 'yes' or 'no'."
+  closing_message: "Thank you for using the calculator. Good-bye."
+  yes_response: "y, yes"
+
+de:
+  name: "Unter welchem Namen sollte ich Sie anrufen?"
+  valid_name: "Stellen Sie sicher, dass Sie einen gültigen Namen verwenden."
+  salute: "Hallo"
+  operator_choice: |
+    Welchen Vorgang möchten Sie ausführen?
+     1) Addition
+     2) Subtraktion
+     3) Multiplikation
+     4) Division
+  invalid_operation: "Ihr Eintrag ist nicht korrekt. Es muss 1, 2, 3 oder 4 sein."
+  number: "Was ist die Zahl?"
+  no_number: "Ihr Eintrag war leer. Eine Zahl ist erforderlich, um die Mathematik zu tun."
+  invalid_number: "Hmm... die nicht wie eine gültige Zahl aussieht."
+  zero_not_allowed: "Es muss eine gültige Nummer eingegeben werden. Außerdem ist '0' nicht als Nenner zulässig."
+  Adding: "Hinzufügen der Zahlen "
+  Subtracting: "Subtrahieren der Zahlen "
+  Multiplying: "Multiplikation der Zahlen "
+  Dividing: "Teilen der Zahlen "
+  result: "Das Ergebnis ist: "
+  do_again: "Möchten Sie eine weitere Berechnung durchführen? ('Ja' oder 'Nein')"
+  invalid_confirmation: "Ihre Antwort wird nicht erkannt. Bitte antworten Sie mit 'Ja' oder 'Nein'."
+  closing_message: "Vielen Dank für die Verwendung des Rechners. Auf Wiedersehen."
