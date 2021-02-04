@@ -75,20 +75,29 @@ def valid_number?(num)
   /\A[+-]?(\d+)?(\.[\d]+)?\z/.match(num)
 end
 
+def empty_response(lang, num)
+  if num.empty?
+    prompt(messages(lang, 'no_number'))
+    true
+  end
+end
+
+def denominator_zero(lang, number1, operator, num)
+  if !(number1.empty?) && operator == "4" && num.to_f.zero?
+    prompt(messages(lang, 'zero_not_allowed'))
+    true
+  end
+end
+
 def get_number(lang, operator, number1)
   num = ''
   loop do
     prompt(messages(lang, 'number'))
     num = gets.chomp
-
-    if num.empty?
-      prompt(messages(lang, 'no_number'))
-    elsif !(number1.empty?) && operator == "4" && num.to_f.zero?
-      prompt(messages(lang, 'zero_not_allowed'))
-    elsif valid_number?(num)
-      break
-    else prompt(messages(lang, 'invalid_number'))
-    end
+    next if empty_response(lang, num)
+    next if denominator_zero(lang, number1, operator, num)
+    break if valid_number?(num)
+    prompt(messages(lang, 'invalid_number'))
   end
   num
 end
