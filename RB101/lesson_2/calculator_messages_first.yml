@@ -1,0 +1,23 @@
+---
+en:
+  welcome: "Welcome to Calculator! Enter your name:"
+  valid_name: "Make sure to use a valid name."
+  operator_choice: "Must choose 1, 2, 3, or 4"
+  first_number: "What's the first number?"
+  second_number: "What's the second number?"
+  no_number: "Hmm... a number must be entered"
+  invalid_number: "Hmm... that doesn't look like a valid number"
+  zero_not_allowed: "A valid number must be entered. Also, '0' is not allowed as a denominator."
+  do_again: "Do you want to perform another calculation? (Y to calculate again)"
+  closing_message: "Thank you for using the calculator. Good-bye."
+de:
+  welcome: "Willkommen bei Calculator! Geben Sie Ihren Namen ein:"
+  valid_name: "Stellen Sie sicher, dass Sie einen gültigen Namen verwenden."
+  operator_choice: "Müssen 1, 2, 3 oder 4 wählen"
+  first_number: "Was ist die erste Zahl?"
+  second_number: "Was ist die zweite Zahl?"
+  no_number: "Hmm... eine Nummer muss eingegeben werden"
+  invalid_number: "Hmm... die nicht wie eine gültige Zahl aussieht"
+  zero_not_allowed: "Es muss eine gültige Nummer eingegeben werden. Außerdem ist "0" nicht als Nenner zulässig."
+  do_again: "Möchten Sie eine weitere Berechnung durchführen? (Y, um erneut zu berechnen)"
+  closing_message: "Vielen Dank für die Verwendung des Rechners. Auf Wiedersehen."
