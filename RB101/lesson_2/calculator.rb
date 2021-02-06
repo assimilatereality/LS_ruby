@@ -153,7 +153,7 @@ greeting(language)
 lang = get_language(language)
 lang = language_choice(lang)
 name = get_name(lang)
-prompt(messages(lang, 'salute') + ' ' + name)
+prompt("#{messages(lang, 'salute')} #{name}")
 answer = 'y'
 
 loop do # main loop
@@ -164,8 +164,10 @@ loop do # main loop
   number2 = get_number(lang, operator, number1)
   prompt("#{operation_to_message(lang, operator)}#{number1} & #{number2}")
   result = calculations(operator, number1, number2)
-  prompt(messages(lang, 'result') + ' ' + result.to_s.sub(/\.0$/,''))
+  prompt("#{messages(lang, 'result')} #{result.to_s.sub(/\.0$/,'')}")
   answer = calc_another?(lang)
   break if answer == 'n'
 end
 
+prompt("#{messages(lang, 'closing_message')} #{name}.")
+prompt(messages(lang, 'bye'))

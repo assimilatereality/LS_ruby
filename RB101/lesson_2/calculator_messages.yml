@@ -29,8 +29,8 @@ en:
   result: "The result is: "
   do_again: "Do you want to perform another calculation? [y/n]"
   invalid_confirmation: "Your answer is not recognized. Please answer 'yes' or 'no'."
-  closing_message: "Thank you for using the calculator. Good-bye."
-  yes_response: "y, yes"
+  closing_message: "Thank you for using the calculator"
+  bye: "Good-bye."
 
 de:
   name: "Unter welchem Namen sollte ich Sie anrufen?"
@@ -54,4 +54,5 @@ de:
   result: "Das Ergebnis ist: "
   do_again: "Möchten Sie eine weitere Berechnung durchführen? ('Ja' oder 'Nein')"
   invalid_confirmation: "Ihre Antwort wird nicht erkannt. Bitte antworten Sie mit 'Ja' oder 'Nein'."
-  closing_message: "Vielen Dank für die Verwendung des Rechners. Auf Wiedersehen."
+  closing_message: "Vielen Dank für die Verwendung des Rechners"
+  bye: "Auf Wiedersehen."
