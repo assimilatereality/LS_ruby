@@ -1,0 +1,9 @@
+---
+name: "By what name should I call you?"
+valid_name: "Make sure to use a valid name."
+salute: "Hello"
+intro: "Welcome to the Rock, Paper, Scissors, Lizard, Spock game."
+choices: "r = rock, p = paper, s = scissors, l = lizard, sp = spock"
+invalid_choice: "Your selection is not valid. Please select again."
+do_again: "Do you want to play another match? [y/n]"
+invalid_confirmation: "Your answer is not recognized. Please answer 'yes' or 'no'."
