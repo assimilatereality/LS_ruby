@@ -1,0 +1,27 @@
+require pry
+
+binding.pry
+
+In repl -->
+arr = [1, 2, 3]
+cd arr
+ls
+first
+last
+reverse
+show-doc map
+cd ..
+cd -
+cd /
+clear
+whereami #takes back to pry after a clear
+whereami 15 # see number of lines before and after binding.pry
+exit! # exit when binding.pry is in a loop to skip iterations with pry being invoked
+require pry
+require pry-byebug
+binding.pry
+next
+continue
+step
+exit-program
+
