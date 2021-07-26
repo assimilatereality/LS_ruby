@@ -5,3 +5,4 @@ while numbers.size < 5
 end
 
 puts numbers
+p numbers

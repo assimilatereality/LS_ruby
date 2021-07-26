@@ -4,7 +4,7 @@ def count_sheep
   end
 end
 
-puts count_sheep
+count_sheep
 
 def count_sheep
   5.times do |sheep|
