@@ -1,7 +1,7 @@
 numbers = {
-  high:   100,
-    medium: 50,
-    low:    10
+  high: 100,
+  medium: 50,
+  low: 10
 }
 
 low_numbers = numbers.select! do |key, value|
