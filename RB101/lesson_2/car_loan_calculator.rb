@@ -1,17 +1,18 @@
 def prompt(message)
   puts "=> #{message}"
 end
+# loan_amount = 0
 
 def get_loan_amount(loan_amount)
   prompt("What loan amount in US Dollars do you want to simulate?")
   loop do
     loan_amount = gets.strip
-    if loan_amount.empty? || loan_amount.to_f < 0
-      prompt("The loan amount must be a positive number.")
+    if loan_amount.empty? || loan_amount.to_f <= 0
+      prompt("The loan amount must be a positive number. Enter a loan amount: ")
     else
       break
     end
-    loan_amount
+    # loan_amount
   end
   loan_amount
 end
@@ -26,7 +27,7 @@ def get_interest_rate(annual_percentage_rate)
     else
       break
     end
-    annual_percentage_rate
+    # annual_percentage_rate
   end
   annual_percentage_rate
 end
@@ -40,7 +41,7 @@ def get_loan_duration(loan_years)
     else
       break
     end
-    loan_years
+    # loan_years
   end
   loan_years
 end

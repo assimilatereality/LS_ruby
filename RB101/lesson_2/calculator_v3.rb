@@ -2,6 +2,7 @@ language = 'en'
 
 require 'yaml'
 MESSAGES = YAML.load_file('calculator_messages.yml')
+#puts MESSAGES.inspect
 
 def messages(message, lang='en')
   MESSAGES[message][lang]
