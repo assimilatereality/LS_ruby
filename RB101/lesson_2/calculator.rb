@@ -97,6 +97,7 @@ def get_number(lang, operator, number1)
     next if empty_response(lang, num)
     next if denominator_zero(lang, number1, operator, num)
     break if valid_number?(num)
+
     prompt(messages(lang, 'invalid_number'))
   end
   num

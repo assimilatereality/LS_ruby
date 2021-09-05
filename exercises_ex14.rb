@@ -3,7 +3,7 @@ a = ['white snow', 'winter wonderland', 'melting ice',
 
 p a.map { |pairs| pairs.split }.flatten
 
-#preferred:
+# preferred:
 p a.map!(&:split).flatten!
 
 

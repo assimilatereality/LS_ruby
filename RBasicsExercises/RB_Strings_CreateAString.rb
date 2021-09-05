@@ -1,5 +1,5 @@
 abc = ''
 # or
-bce = string.new
+bce = String.new
 
 
