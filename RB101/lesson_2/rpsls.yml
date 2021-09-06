@@ -4,7 +4,7 @@ game_instructions: |
   You will play the computer.
   The winner of %{VICTORIES_TO_WIN} rounds wins the match.
   In each round, you will select one of five choices.
-name: "How would you like to be addressed?"
+name: "What is your name?"
 valid_name: "Make sure to use a valid name."
 salute: "Hi"
 intro: "Welcome to the Rock, Paper, Scissors, Lizard, Spock game."

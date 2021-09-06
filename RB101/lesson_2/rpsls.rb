@@ -132,6 +132,7 @@ def print_player_choices(name, user_choice, computer_choice)
 end
 
 def print_round_result(round_winner)
+  sleep(1.5)
   puts ''
   if round_winner == 'tie'
     prompt("The round was a #{round_winner}.")
@@ -141,6 +142,7 @@ def print_round_result(round_winner)
 end
 
 def print_scoreboard(name, score)
+  sleep(1.5)
   puts "\n*****    SCOREBOARD    *****"
   prompt("#{name}: #{score[name.to_sym]} vs. Computer: #{score[:Computer]}")
 end
@@ -158,6 +160,7 @@ end
 
 def play_the_game(name, score)
   loop do
+    sleep(1.5)
     user_choice = change_choice_to_word(get_player_choice)
     computer_choice = CHOICES.values.sample
     clear_screen
