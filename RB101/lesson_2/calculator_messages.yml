@@ -18,7 +18,8 @@ en:
      3) Multiplication
      4) Division
   invalid_operation: "Your entry is not correct. It must be 1, 2, 3, or 4."
-  number: "What's the number?"
+  first_number: "What is the first number?"
+  second_number: "What is the second number?"
   no_number: "Your entry was blank. A number is needed to do the math."
   invalid_number: "Hmm... that doesn't look like a valid number."
   zero_not_allowed: "A valid number must be entered. Also, '0' is not allowed as a denominator."

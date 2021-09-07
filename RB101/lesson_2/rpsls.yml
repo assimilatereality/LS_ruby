@@ -1,9 +1,15 @@
 ---
-name: "By what name should I call you?"
+game_instructions: |
+  The game is "Rock, Paper, Scissors, Lizard, Spock".
+  You will play the computer.
+  The winner of %{VICTORIES_TO_WIN} rounds wins the match.
+  In each round, you will select one of five choices.
+name: "What is your name?"
 valid_name: "Make sure to use a valid name."
-salute: "Hello"
+salute: "Hi"
 intro: "Welcome to the Rock, Paper, Scissors, Lizard, Spock game."
 choices: "r = rock, p = paper, s = scissors, l = lizard, sp = spock"
+get_choice: "What is your choice? Select one."
 invalid_choice: "Your selection is not valid. Please select again."
 do_again: "Do you want to play another match? [y/n]"
 invalid_confirmation: "Your answer is not recognized. Please answer 'yes' or 'no'."

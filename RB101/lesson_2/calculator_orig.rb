@@ -1,5 +1,5 @@
 # ask the user for two numbers
-# ask the user for an operatio to perform
+# ask the user for an operation to perform
 # perform the operation on the two numbers
 # output the result
 
@@ -14,9 +14,9 @@ end
 def operation_to_message(op)
   case op
   when '1'
-  'Adding'
+    'Adding'
   when '2'
-  'Subtracting'
+    'Subtracting'
   when '3'
     'Multiplying'
   when '4'
@@ -81,7 +81,7 @@ loop do # main loop
     if %w(1 2 3 4).include?(operator)
       break
     else
-      prompt("Must choose 1, 2, 3, or4")
+      prompt("Must choose 1, 2, 3, or 4")
     end
   end
 
