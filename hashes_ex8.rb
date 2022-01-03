@@ -16,4 +16,4 @@ result.each_value do |v|
   puts '______'
   p v
 end
-result.each { |k, v| puts "#{k}: #{v}" }
+#result.each { |k, v| puts "#{k}: #{v}" }

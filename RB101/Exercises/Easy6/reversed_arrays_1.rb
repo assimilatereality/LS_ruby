@@ -1,4 +1,4 @@
-def reverse!(list)
+def reversed!(list)
   num = list.size
   count = 0
   until count == num
@@ -23,7 +23,7 @@ def reverse!(array)
 end
 
 p list = [1,2,3,4]
-p result = reverse!(list)
+p result = reversed!(list)
 p result == [4, 3, 2, 1] # true
 p list == [4, 3, 2, 1] # true
 p list.object_id == result.object_id # true

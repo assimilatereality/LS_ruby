@@ -9,3 +9,5 @@ def multiply_list(arr1, arr2)
 end
 
 p multiply_list([3, 5, 7], [9, 10, 11]) #== [27, 50, 77]
+
+p [3, 5, 7].zip([9, 10, 11])

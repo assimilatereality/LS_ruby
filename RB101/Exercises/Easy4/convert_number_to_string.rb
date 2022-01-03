@@ -1,11 +1,11 @@
-#DIGITS = {
-#  0 => '0', 1 => '1', 2 => '2', 3 => '3', 4 => '4',
-#  5 => '5', 6 => '6', 7 => '7', 8 => '8', 9 => '9'
-#}
+DIGITS1 = {
+  0 => '0', 1 => '1', 2 => '2', 3 => '3', 4 => '4',
+  5 => '5', 6 => '6', 7 => '7', 8 => '8', 9 => '9'
+}
 
-def integer_to_string(number)
+def integer_to_string1(number)
   str = []
-  number.digits.each { |num| str << DIGITS[num] }
+  number.digits.each { |num| str << DIGITS1[num] }
   str.reverse.join
 end
 
@@ -21,6 +21,9 @@ def integer_to_string(number)
   result
 end
 
+p integer_to_string1(4321) #== '4321'
+p integer_to_string1(0) #== '0'
+p integer_to_string1(5000) #== '5000'
 p integer_to_string(4321) #== '4321'
 p integer_to_string(0) #== '0'
 p integer_to_string(5000) #== '5000'
