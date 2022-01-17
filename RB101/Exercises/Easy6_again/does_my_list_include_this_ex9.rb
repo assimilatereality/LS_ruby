@@ -1,16 +1,12 @@
-def include?(array, item)
+def include?(ary, num)
   rst = ''
-  if array.empty?
+  if ary.empty?
     rst = false
   else
-    array.detect { |x| rst = (x == item) }
+    ary.detect { |x| rst = (x == num) }
   end
   rst
 end
-
-#def include?(array, value)
-#  !!array.find_index(value)
-#end
 
 p include?([1,2,3,4,5], 3) #== true
 p include?([1,2,3,4,5], 6) #== false

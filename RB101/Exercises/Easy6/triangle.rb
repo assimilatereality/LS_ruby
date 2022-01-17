@@ -29,7 +29,7 @@ triangle(4)
 def trianglefe(num, reversed, side)
   arr = (1..num).to_a
   arr = arr.reverse if reversed
-  if side == left
+  if side == 'left'
     arr.each { |i| puts ('*' * (i)).ljust(num) }
   else
     arr.each { |i| puts ('*' * (i)).rjust(num) }
@@ -37,10 +37,10 @@ def trianglefe(num, reversed, side)
 
 end
 
-trianglefe(4, true, left)
-trianglefe(4, true, right)
-trianglefe(4, false, left)
-trianglefe(4, false, right)
+trianglefe(4, true, 'left')
+trianglefe(4, true, 'right')
+trianglefe(4, false, 'left')
+trianglefe(4, false, 'right')
 
 
 def triangle(number, reversed, side)
