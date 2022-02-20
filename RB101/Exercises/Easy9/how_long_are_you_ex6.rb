@@ -1,6 +1,6 @@
 def word_lengths(str)
   ary = str.split(' ')
-  ary.map! do |word|
+  ary.map do |word|
     "#{word} #{word.size}"
   end
 end
