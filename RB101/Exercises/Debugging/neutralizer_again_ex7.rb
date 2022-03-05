@@ -1,11 +1,8 @@
-#require 'pry'
-
 def neutralize(sentence)
   words = sentence.split(' ')
-  # words.each do |word|
-  #  words.delete(word) if negative?(word)
-  words.reject! { |word| negative?(word) }
-  # end
+  words.each do |word|
+    words.delete(word) if negative?(word)
+  end
 
   words.join(' ')
 end
