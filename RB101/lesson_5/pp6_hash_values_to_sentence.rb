@@ -7,5 +7,5 @@ munsters = {
 }
 
 munsters.each_pair do |k, v|
-  p "#{k} is a #{v["age"]}-year-old #{v["gender"]}."
+  p "#{k} is a #{v['age']}-year-old #{v['gender']}."
 end

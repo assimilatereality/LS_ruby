@@ -54,6 +54,22 @@ def joinor(arr, delimiter=', ', word='or')
   end
 end
 
+def place_piece!(board, current_player)
+  if current_player == 'Player'
+    player_places_piece!(board)
+  else
+    computer_places_piece!(board)
+  end
+end
+
+def alternate_player(current_player)
+  if current_player == 'Player'
+    'Computer'
+  else
+    'Player'
+  end
+end
+
 def player_places_piece!(brd)
   square = ''
   loop do
@@ -83,18 +99,18 @@ def computer_places_piece!(brd)
 
   WINNING_LINES.each do |line|
     square = find_attack_square(line, brd, COMPUTER_MARKER)
-    if square
-      puts "attack #{square}"
-    end
+    # if square
+    #  puts "attack #{square}"
+    #end
     break if square
   end
 
   if !square
     WINNING_LINES.each do |line|
       square = find_at_risk_square(line, brd, PLAYER_MARKER)
-      if square
-        puts "defend #{square}"
-      end
+      # if square
+      #  puts "defend #{square}"
+      # end
       break if square
     end
   end
@@ -141,6 +157,7 @@ def detect_winner(brd)
 end
 
 scoreboard = { Player: 0, Computer: 0 }
+current_player = %w[Player Computer].sample
 
 loop do
 
@@ -148,12 +165,10 @@ loop do
 
   loop do
     display_board(board)
+    puts current_player
 
-    player_places_piece!(board)
-    break if someone_won?(board) || board_full?(board)
-
-    # puts board.inspect
-    computer_places_piece!(board)
+    place_piece!(board, current_player)
+    current_player = alternate_player(current_player)
     break if someone_won?(board) || board_full?(board)
   end
 
