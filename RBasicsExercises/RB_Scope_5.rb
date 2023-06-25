@@ -4,5 +4,5 @@ def my_value(b)
   b = 'yzzyX'
 end
 
-puts my_value(a)
-puts a
+puts my_value(a) # yzzyX
+puts a # Xyzzy

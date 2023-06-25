@@ -4,25 +4,28 @@ MESSAGES = YAML.load_file('rpsls.yml')
 
 VICTORIES_TO_WIN = 3
 
+#CHOICES = {
+#  'r': 'rock',
+#  'p': 'paper',
+#  's': 'scissors',
+#  'l': 'lizard',
+# 'sp': 'spock'
+#}
+
+
+
+#KEYS_BEAT_VALUES = {
 CHOICES = {
-  'r': 'rock',
-  'p': 'paper',
-  's': 'scissors',
-  'l': 'lizard',
-  'sp': 'spock'
+  'r': { 'rock': %w[scissors lizard] },
+  'p': { 'paper': %w[rock spock] },
+  's': { 'scissors': %w[paper lizard] },
+  'l': { 'lizard': %w[paper spock] },
+  'sp': { 'spock': %w[rock scissors] }
 }
 
 # Convert symbols to array of strings
 CHOICE_OPTIONS = []
 CHOICES.keys.each { |elem| CHOICE_OPTIONS << elem.to_s } # %w[r p s l sp]
-
-KEYS_BEAT_VALUES = {
-  'rock': %w[scissors lizard],
-  'paper': %w[rock spock],
-  'scissors': %w[paper lizard],
-  'lizard': %w[paper spock],
-  'spock': %w[rock scissors]
-}
 
 score = {}
 
@@ -75,7 +78,7 @@ def get_player_choice
 end
 
 def change_choice_to_word(user_choice)
-  CHOICES.fetch(user_choice.to_sym)
+  CHOICES.fetch_values(user_choice.to_sym)[0].keys.to_s
 end
 
 def set_round_result(user, computer, name)
@@ -109,10 +112,12 @@ def print_game_introduction
   instruction_content = MESSAGES['game_instructions']
   puts format(instruction_content, VICTORIES_TO_WIN: VICTORIES_TO_WIN)
 
-  KEYS_BEAT_VALUES.each_pair do |key, value|
-    puts "#{key.to_s.ljust(10,
-                           '-')} beats #{value[0].rjust(10,
-                                                        '-')} and #{value[1]}"
+  CHOICES.each_pair do |_, value|
+    value.each_pair do |k, v|
+      puts "#{k.to_s.ljust(10,
+                           '-')} beats #{v[0].rjust(10,
+                                                    '-')} and #{v[1]}"
+    end
   end
   puts ''
 end
@@ -162,7 +167,10 @@ def play_the_game(name, score)
   loop do
     sleep(1.5)
     user_choice = change_choice_to_word(get_player_choice)
-    computer_choice = CHOICES.values.sample
+    user_choice = user_choice.class
+    puts "user_choice is #{user_choice}"
+    computer_choice = CHOICES.values.sample.keys[0].to_s
+    puts "computer_choice is #{computer_choice}"
     clear_screen
     print_player_choices(name, user_choice, computer_choice)
     round_winner = set_round_result(user_choice, computer_choice, name)

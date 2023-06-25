@@ -1,0 +1,12 @@
+---
+welcome: "Welcome to Calculator!"
+name: "By what name should I call you?"
+valid_name: "Make sure to use a valid name."
+salutation: "Hi"
+operator_choice:  |
+  What operation would you like to perform?
+    1) Addition
+    2) Subtraction
+    3) Multiplication
+    4) Division
+invalid_operation: "Your entry is not correct. It must be 1, 2, 3, or 4."

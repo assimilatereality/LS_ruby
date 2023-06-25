@@ -5,4 +5,4 @@ array.each do |element|
   p a
 end
 
-puts a
+puts a # undefined local variable or method 'a'

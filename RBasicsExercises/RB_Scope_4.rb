@@ -2,7 +2,8 @@ a = "Xyzzy"
 
 def my_value(b)
   b[2] = '-'
+  b
 end
 
-my_value(a)
-puts a
+puts my_value(a) # Xy-zy
+puts a # Xy-zy
